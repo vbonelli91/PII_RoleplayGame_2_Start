@@ -1,8 +1,16 @@
+using System.Collections;
+using System;
+using System.Collections.Generic;
+
+
 namespace RoleplayGame
 {
-    public class Knight
+    public class Knight:ICharacter
     {
-        private int health = 100;
+         
+        private int health=100;
+
+        public List <IItems> Items{get;set;} = new List<IItems>();
 
         public Knight(string name)
         {
@@ -10,6 +18,7 @@ namespace RoleplayGame
         }
 
         public string Name { get; set; }
+
 
         public Sword Sword { get; set; }
 
@@ -56,6 +65,11 @@ namespace RoleplayGame
         public void Cure()
         {
             this.Health = 100;
+        }
+
+        public void AddItem(IItems item){
+            this.Items.Add(item);
+
         }
     }
 }

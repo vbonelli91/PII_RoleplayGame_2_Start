@@ -1,9 +1,16 @@
+using System.Collections;
+using System;
+using System.Collections.Generic;
+
+
+
 namespace RoleplayGame
 {
-    public class Dwarf
+    public class Dwarf:ICharacter
     {
         private int health = 100;
 
+        public List <IItems> Items{get;set;} = new List<IItems>();
         public Dwarf(string name)
         {
             this.Name = name;
@@ -56,6 +63,10 @@ namespace RoleplayGame
         public void Cure()
         {
             this.Health = 100;
+        }
+         public void AddItem(IItems item){
+            this.Items.Add(item);
+
         }
     }
 }
