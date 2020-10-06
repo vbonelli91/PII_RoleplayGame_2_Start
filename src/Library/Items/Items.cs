@@ -1,7 +1,6 @@
 namespace RoleplayGame
 {
-    public interface IItems
+    public abstract class Items
     {
-       
     }
 }
