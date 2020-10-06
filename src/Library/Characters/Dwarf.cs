@@ -10,10 +10,12 @@ namespace RoleplayGame
     {
         private int health = 100;
 
-        public List <IItems> Items{get;set;} = new List<IItems>();
         public Dwarf(string name)
         {
             this.Name = name;
+            this.Axe = new Axe();
+            this.Helmet = new Helmet();
+            this.Shield = new Shield();
         }
 
         public string Name { get; set; }
@@ -64,9 +66,6 @@ namespace RoleplayGame
         {
             this.Health = 100;
         }
-         public void AddItem(IItems item){
-            this.Items.Add(item);
-
-        }
+        
     }
 }

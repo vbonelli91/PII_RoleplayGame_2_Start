@@ -9,10 +9,11 @@ namespace RoleplayGame
     {
         private int health = 100;
 
-        public List <IItems> Items{get;set;} = new List<IItems>();
         public Wizard(string name)
         {
             this.Name = name;
+            this.SpellsBook= new SpellsBook();
+            this.Staff= new Staff();
         }
 
         public string Name { get; set; }
@@ -64,9 +65,6 @@ namespace RoleplayGame
             this.Health = 100;
         }
 
-        public void AddItem(IItems item){
-            this.Items.Add(item);
-    }
 }
 
 }
