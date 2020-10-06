@@ -5,7 +5,10 @@ namespace RoleplayGame
     public class SpellsBook
     {
         public Spell[] Spells { get; set; }
-        
+        public SpellsBook()
+        {
+            this.Spells = new Spell[]{ new Spell() };
+        }
         public int AttackValue
         {
             get

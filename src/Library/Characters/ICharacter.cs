@@ -9,17 +9,13 @@ namespace RoleplayGame
 //tienen atributos y metodos en común, como tambien una lista de IItems
     public interface ICharacter
     {
-        List <IItems> Items  {get; set;}
-
         int Health {get;}
         String Name {get; set;}
 
         int AttackValue{get;}
         int DefenseValue{get;}
         void Cure();        
-        public void ReceiveAttack(int power);
-
-         void AddItem(IItems item);  
+        public void ReceiveAttack(int power); 
 
 
 
