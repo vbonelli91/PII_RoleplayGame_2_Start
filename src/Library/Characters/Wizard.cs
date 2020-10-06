@@ -1,9 +1,15 @@
+using System.Collections;
+using System;
+using System.Collections.Generic;
+
+
 namespace RoleplayGame
 {
-    public class Wizard
+    public class Wizard:ICharacter
     {
         private int health = 100;
 
+        public List <IItems> Items{get;set;} = new List<IItems>();
         public Wizard(string name)
         {
             this.Name = name;
@@ -51,9 +57,16 @@ namespace RoleplayGame
             }
         }
 
+        
+
         public void Cure()
         {
             this.Health = 100;
         }
+
+        public void AddItem(IItems item){
+            this.Items.Add(item);
     }
+}
+
 }
