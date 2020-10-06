@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 
 
-
 namespace RoleplayGame
 {
+    /*
+        Se aplicó el patrón Creator en el momento en el cual en vez de pasar los items como parámetros, 
+        los creamos dentro del mismo constructor.
+    */
     public class Dwarf:ICharacter
     {
         private int health = 100;

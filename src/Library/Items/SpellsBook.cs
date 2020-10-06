@@ -2,6 +2,10 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
+    /*
+        Se aplicó el patrón Creator en el momento en el cual en vez de pasar los "Spells" como parámetros, 
+        los creamos dentro del mismo constructor.
+    */
     public class SpellsBook
     {
         public Spell[] Spells { get; set; }
